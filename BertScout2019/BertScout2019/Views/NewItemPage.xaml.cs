@@ -20,7 +20,7 @@ namespace BertScout2019.Views
             Item = new Item
             {
                 Text = "Item name",
-                Description = "This is an item description."
+                Location = "This is an item description."
             };
 
             BindingContext = this;
