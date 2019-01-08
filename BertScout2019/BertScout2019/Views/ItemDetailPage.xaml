@@ -4,8 +4,10 @@
              x:Class="BertScout2019.Views.ItemDetailPage"
              Title="{Binding Title}">
     <StackLayout Spacing="20" Padding="15">
-        <Label Text="Text:" FontSize="Medium" />
-        <Label Text="{Binding Item.Text}" FontSize="Small"/>
+        <Label Text="Number:" FontSize="Medium" />
+        <Label Text="{Binding Item.Number}" FontSize="Small"/>
+        <Label Text="Name:" FontSize="Medium" />
+        <Label Text="{Binding Item.Name}" FontSize="Small"/>
         <Label Text="Location:" FontSize="Medium" />
         <Label Text="{Binding Item.Location}" FontSize="Small"/>
     </StackLayout>

@@ -26,8 +26,9 @@ namespace BertScout2019.Views
 
             var item = new Item
             {
-                Text = "Item 1",
-                Location = "This is an item description."
+                Number = 0,
+                Name = "",
+                Location = ""
             };
 
             viewModel = new ItemDetailViewModel(item);

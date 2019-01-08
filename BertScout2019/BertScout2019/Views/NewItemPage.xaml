@@ -8,8 +8,10 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout Spacing="20" Padding="15">
-            <Label Text="Text" FontSize="Medium" />
-            <Entry Text="{Binding Item.Text}" FontSize="Small" />
+            <Label Text="Number" FontSize="Medium" />
+            <Entry Text="{Binding Item.Number}" FontSize="Small" />
+            <Label Text="Name" FontSize="Medium" />
+            <Entry Text="{Binding Item.Name}" FontSize="Small" />
             <Label Text="Location" FontSize="Medium" />
             <Editor Text="{Binding Item.Location}" FontSize="Small" Margin="0" />
         </StackLayout>

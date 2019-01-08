@@ -11,9 +11,9 @@ namespace BertScout2019.Models
 
         public ItemRepository()
         {
-            Add(new Item { Id = Guid.NewGuid().ToString(), Text = "Item 1", Location = "This is an item description." });
-            Add(new Item { Id = Guid.NewGuid().ToString(), Text = "Item 2", Location = "This is an item description." });
-            Add(new Item { Id = Guid.NewGuid().ToString(), Text = "Item 3", Location = "This is an item description." });
+            Add(new Item { Id = Guid.NewGuid().ToString(), Number = 1, Name = "Name 1", Location = "Location 1" });
+            Add(new Item { Id = Guid.NewGuid().ToString(), Number = 2, Name = "Name 2", Location = "Location 2" });
+            Add(new Item { Id = Guid.NewGuid().ToString(), Number = 3, Name = "Name 3", Location = "Location 3" });
         }
 
         public Item Get(string id)
