@@ -5,10 +5,10 @@
              Title="{Binding Title}">
     <StackLayout Spacing="20" Padding="15">
         <Label Text="Number:" FontSize="Medium" />
-        <Label Text="{Binding Item.Number}" FontSize="Small"/>
+        <Label Text="{Binding Team.Number}" FontSize="Small"/>
         <Label Text="Name:" FontSize="Medium" />
-        <Label Text="{Binding Item.Name}" FontSize="Small"/>
+        <Label Text="{Binding Team.Name}" FontSize="Small"/>
         <Label Text="Location:" FontSize="Medium" />
-        <Label Text="{Binding Item.Location}" FontSize="Small"/>
+        <Label Text="{Binding Team.Location}" FontSize="Small"/>
     </StackLayout>
 </ContentPage>

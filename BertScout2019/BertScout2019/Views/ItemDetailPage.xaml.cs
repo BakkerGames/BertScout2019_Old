@@ -24,7 +24,7 @@ namespace BertScout2019.Views
         {
             InitializeComponent();
 
-            var item = new Item
+            var item = new Team
             {
                 Number = 0,
                 Name = "",

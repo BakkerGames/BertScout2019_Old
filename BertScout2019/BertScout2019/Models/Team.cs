@@ -2,7 +2,7 @@
 
 namespace BertScout2019.Models
 {
-    public class Item
+    public class Team
     {
         public string Id { get; set; }
         private int _Number = 0;

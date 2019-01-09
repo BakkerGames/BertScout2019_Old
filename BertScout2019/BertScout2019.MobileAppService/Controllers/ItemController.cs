@@ -23,14 +23,14 @@ namespace BertScout2019.Controllers
         }
 
         [HttpGet("{id}")]
-        public Item GetItem(string id)
+        public Team GetItem(string id)
         {
-            Item item = ItemRepository.Get(id);
+            Team item = ItemRepository.Get(id);
             return item;
         }
 
         [HttpPost]
-        public IActionResult Create([FromBody]Item item)
+        public IActionResult Create([FromBody]Team item)
         {
             try
             {
@@ -50,7 +50,7 @@ namespace BertScout2019.Controllers
         }
 
         [HttpPut]
-        public IActionResult Edit([FromBody] Item item)
+        public IActionResult Edit([FromBody] Team item)
         {
             try
             {

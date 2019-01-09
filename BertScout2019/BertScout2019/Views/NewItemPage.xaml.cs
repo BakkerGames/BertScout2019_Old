@@ -11,13 +11,13 @@ namespace BertScout2019.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NewItemPage : ContentPage
     {
-        public Item Item { get; set; }
+        public Team Item { get; set; }
 
         public NewItemPage()
         {
             InitializeComponent();
 
-            Item = new Item
+            Item = new Team
             {
                 Number = 0,
                 Name = "",

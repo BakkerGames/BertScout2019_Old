@@ -6,11 +6,11 @@ namespace BertScout2019.ViewModels
 {
     public class ItemDetailViewModel : BaseViewModel
     {
-        public Item Item { get; set; }
-        public ItemDetailViewModel(Item item = null)
+        public Team Team { get; set; }
+        public ItemDetailViewModel(Team team = null)
         {
-            Title = item.FullName;
-            Item = item;
+            Title = team.FullName;
+            Team = team;
         }
     }
 }

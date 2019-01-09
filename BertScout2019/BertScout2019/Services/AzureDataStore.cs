@@ -8,42 +8,42 @@ using BertScout2019.Models;
 
 namespace BertScout2019.Services
 {
-    public class AzureDataStore : IDataStore<Item>
+    public class AzureDataStore : IDataStore<Team>
     {
         HttpClient client;
-        IEnumerable<Item> items;
+        IEnumerable<Team> items;
 
         public AzureDataStore()
         {
             client = new HttpClient();
             client.BaseAddress = new Uri($"{App.AzureBackendUrl}/");
 
-            items = new List<Item>();
+            items = new List<Team>();
         }
 
-        public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)
+        public async Task<IEnumerable<Team>> GetItemsAsync(bool forceRefresh = false)
         {
             if (forceRefresh)
             {
                 var json = await client.GetStringAsync($"api/item");
-                items = await Task.Run(() => JsonConvert.DeserializeObject<IEnumerable<Item>>(json));
+                items = await Task.Run(() => JsonConvert.DeserializeObject<IEnumerable<Team>>(json));
             }
 
             return items;
         }
 
-        public async Task<Item> GetItemAsync(string id)
+        public async Task<Team> GetItemAsync(string id)
         {
             if (id != null)
             {
                 var json = await client.GetStringAsync($"api/item/{id}");
-                return await Task.Run(() => JsonConvert.DeserializeObject<Item>(json));
+                return await Task.Run(() => JsonConvert.DeserializeObject<Team>(json));
             }
 
             return null;
         }
 
-        public async Task<bool> AddItemAsync(Item item)
+        public async Task<bool> AddItemAsync(Team item)
         {
             if (item == null)
                 return false;
@@ -55,7 +55,7 @@ namespace BertScout2019.Services
             return response.IsSuccessStatusCode;
         }
 
-        public async Task<bool> UpdateItemAsync(Item item)
+        public async Task<bool> UpdateItemAsync(Team item)
         {
             if (item == null || item.Id == null)
                 return false;

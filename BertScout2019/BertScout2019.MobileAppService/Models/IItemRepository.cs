@@ -5,10 +5,10 @@ namespace BertScout2019.Models
 {
     public interface IItemRepository
     {
-        void Add(Item item);
-        void Update(Item item);
-        Item Remove(string key);
-        Item Get(string id);
-        IEnumerable<Item> GetAll();
+        void Add(Team item);
+        void Update(Team item);
+        Team Remove(string key);
+        Team Get(string id);
+        IEnumerable<Team> GetAll();
     }
 }
