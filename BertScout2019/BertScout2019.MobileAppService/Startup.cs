@@ -41,8 +41,12 @@ namespace BertScout2019.MobileAppService
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
+#pragma warning disable CS0618 // Type or member is obsolete
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
+#pragma warning restore CS0618 // Type or member is obsolete
+#pragma warning disable CS0618 // Type or member is obsolete
             loggerFactory.AddDebug();
+#pragma warning restore CS0618 // Type or member is obsolete
 
             app.UseMvc();
 
